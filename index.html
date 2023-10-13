@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In & Sign Up</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body class="bg-white">
+    <main class="w-full">
+        <section class="w-1/2 flex justify-center flex-wrap items-center mt-[100px] mx-auto bg-slate-700 pb-8">
+            <nav class="w-[70%] flex justify-center items-center mt-6">
+                <ul class="w-full flex justify-center">
+                    <li
+                        class="w-full flex justify-center items-center font-arial text-white text-3xl bg-green-700 cursor-pointer h-[50px]" data-check="signup">
+                        Sign Up</li>
+                    <li
+                        class="w-full flex justify-center items-center font-arial text-white text-3xl bg-gray-400 cursor-pointer duration-500 hover:bg-green-700 h-[50px]" data-check="login">
+                        Log In</li>
+                </ul>
+            </nav>
+            <div class="flex justify-center items-center w-full mt-7">
+                <h2 class="capitalize text-white font-arial text-3xl" data-data="signup">sign up for free !</h2>
+                <h2 class="hidden capitalize text-white font-arial text-3xl" data-data="login">welcome back !</h2>
+            </div>
+           
+            <article class="flex justify-center items-center mt-8" data-data="signup">
+                <form action="reg.py" method="post" class="flex justify-center flex-wrap mx-auto">
+                    <div class="flex justify-center w-full mx-auto flex-wrap">
+                        <div class="w-1/2 flex flex-wrap justify-center">
+                            <label for="#firstName" class="font-arial text-white ml-10 capitalize text-2xl w-full">first name <span class="text-green-700 text-3xl">*</span></label>
+                            <input type="text" required placeholder="First Name" id="firstName" class="bg-transparent outline-none border h-[40px] border-gray-400 text-white w-[300px]">
+                        </div>
+                        <div class="w-1/2 flex flex-wrap">
+                            <label for="#lastName" class="font-arial text-white capitalize text-2xl w-full">last name <span class="text-green-700 text-3xl">*</span></label>
+                            <input type="text" required placeholder="Last Name" id="lastName" class="bg-transparent outline-none border border-gray-400 text-white w-[300px] h-[40px]">
+                        </div>
+                    </div>
+                    <div class="w-[60%] flex flex-wrap mt-5">
+                    <div class="w-full">
+                        <label for="#email" class="font-arial text-white capitalize w-full text-2xl">email <span class="text-green-700 text-3xl">*</span></label>
+                        <input type="email" placeholder="Email" id="email" class="bg-transparent border outline-none border-gray-400 text-white w-full h-[40px] flex justify-evenly items-center">
+                    </div>
+                    <div class="w-full mt-4">
+                        <label for="#password" class="font-arial text-white capitalize w-full text-2xl">password <span class="text-green-700 text-3xl">*</span></label>
+                        <input oninput="checkPass(event)" type="password" placeholder="Password" id="password" class="bg-transparent outline-none border border-gray-400 text-white w-full h-[40px] flex justify-evenly items-center">
+                        <div id="passErr" class="font-arial text-2xl"></div>
+                    </div>
+                </div>
+                </form>
+            </article>
+            <article class="hidden justify-center items-center mt-8" data-data="login">
+                <form action="reg.py" method="post" class="flex justify-center flex-wrap mx-auto">
+                    <div class="w-[70%] flex justify-center items-center flex-wrap mt-5">
+                    <div class="w-full">
+                        <label for="#email" class="font-arial text-white capitalize w-full text-2xl">email <span class="text-green-700 text-3xl">*</span></label>
+                        <input type="email" placeholder="Email" id="email" class="bg-transparent border outline-none border-gray-400 text-white w-full h-[40px] flex justify-evenly items-center">
+                    </div>
+                    <div class="w-full mt-4">
+                        <label for="#password" class="font-arial text-white capitalize w-full text-2xl">password <span class="text-green-700 text-3xl">*</span></label>
+                        <input oninput="checkPass(event)" type="password" placeholder="Password" id="password" class="bg-transparent outline-none border border-gray-400 text-white w-full h-[40px] flex justify-evenly items-center">
+                        <div id="passErr" class="font-arial text-2xl"></div>
+                    </div>
+                </div>
+                </form>
+            </article>
+            <div class="mt-8 w-[60%] flex justify-center items-center flex-wrap">
+                <button class="flex justify-center items-center capitalize font-arial text-white bg-transparent duration-500 hover:bg-green-700 border p-4 hover:border-green-700" data-data="signup">lets get started !</button>
+                <button class="hidden justify-center items-center capitalize font-arial text-white bg-transparent duration-500 hover:bg-green-700 border w-full text-2xl py-4 hover:border-green-700"  data-data="login">login !</button>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/master.js"></script>
+
+</html>
